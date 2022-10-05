@@ -1,0 +1,13 @@
+from sklearn.pipeline import Pipeline
+from sklearn.model_selection import cross_validate
+
+def logistic_regression_scores(x_train, y_train, penalty="l2", solver = "liblinear"):
+    logistic_regression = LogisticRegression(penalty = penalty, solver = solver)
+
+    logistic_regression.fit(x_train, y_train)
+
+    # Evaluate the models using crossvalidation
+    scores = cross_validate(logistic_regression, x_cross_val, y_cross_val,
+                                scoring=["accuracy", "f1", "precision", "recall"], cv=10)
+
+    return scores

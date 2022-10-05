@@ -10,3 +10,5 @@
  stream_quality folder contains data for classification.
 
 report.pdf contains the description to both tasks.
+
+Python 3.10.2 was used.
